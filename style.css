@@ -1,0 +1,70 @@
+body {
+    background-color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #393E41;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.ads-container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Specific styles for different ad positions */
+.ad-top, .ad-bottom {
+    width: 320px;
+    height: 50px;
+    margin: 10px auto;
+}
+
+.ad-left, .ad-right {
+    width: 160px;
+    height: 600px;
+    display: none; /* Initially hidden for mobile, can be adjusted for larger screens */
+}
+
+.video-container {
+    background-color: #D3D0CB;
+    width: 350px;
+    height: 300px;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+}
+
+/* Plyr specific styles */
+.plyr {
+    height: 100%;
+    width: 100%;
+}
+
+/* Flexbox layout for centering content */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .video-container {
+        width: 640px;
+    }
+}

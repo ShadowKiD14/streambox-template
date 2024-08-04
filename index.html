@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    
+</head>
+<body>
+    <div class="navbar">
+        StreamBox
+    </div>
+
+    <div class="ads-container ad-top">
+        <!-- Ad script for top ad (e.g., 320x50) -->
+         <p> Ad space</p>
+    </div>
+
+    <div class="content">
+        <div class="video-container">
+            <video id="video-player" src="{{ video_url }}" controls></video>
+        </div>      
+    </div>
+
+    <div class="ads-container ad-bottom">
+        <!-- Ad script for bottom ad (e.g., 320x50) -->
+        <p>Ad space</p>
+    </div>
+
+
+    <!-- in video ads fluidplayer from exoclick -->
+<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+<script>
+    var myFP = fluidPlayer(
+        'video-id',	{
+	"layoutControls": {
+		"controlBar": {
+			"autoHideTimeout": 3,
+			"animated": true,
+			"autoHide": true
+		},
+		"htmlOnPauseBlock": {
+			"html": null,
+			"height": null,
+			"width": null
+		},
+		"autoPlay": true,
+		"mute": false,
+		"allowTheatre": false,
+		"playPauseAnimation": true,
+		"playbackRateEnabled": false,
+		"allowDownload": false,
+		"playButtonShowing": true,
+		"fillToContainer": false,
+		"posterImage": ""
+	},
+	"vastOptions": {
+		"adList": [
+			{
+				"roll": "preRoll",
+				"vastTag": "",
+				"adText": ""
+			}
+		],
+		"adCTAText": false,
+		"adCTATextPosition": ""
+	}
+});
+</script>
+    <script>
+        window.Telegram.WebApp.ready();
+    </script>
+</body>
+</html>
